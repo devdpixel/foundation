@@ -1,49 +1,169 @@
-/**
- * Стилі кнопки — звичайний CSS з змінними теми.
- * Окремий файл на компонент без @apply/@reference (Tailwind v4).
- */
+@layer components {
+  .btn {
+    @apply focus-visible:border-ring
+    focus-visible:ring-2
+    focus-visible:ring-ring/50
+    aria-invalid:ring-2
+    aria-invalid:ring-destructive/20
+    dark:aria-invalid:ring-destructive/40
+    aria-invalid:border-destructive
+    dark:aria-invalid:border-destructive/50
+    rounded-lg
+    border
+    border-transparent
+    bg-clip-padding
+    text-sm
+    font-medium
+    [&_svg:not([class*='size-'])]:size-4
+    inline-flex
+    items-center
+    justify-center
+    whitespace-nowrap
+    transition-all
+    disabled:pointer-events-none
+    disabled:opacity-50
+    [&_svg]:pointer-events-none
+    shrink-0
+    [&_svg]:shrink-0
+    outline-none
+    select-none;
+  }
 
-.btn {
-  border-radius: var(--radius-lg);
-  border: 1px solid transparent;
-  background-clip: padding-box;
-  font-size: 0.875rem;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  transition: all 150ms;
-  outline: none;
-  user-select: none;
-}
+  /* 
+   * variants 
+   */
+  .btn-default {
+    @apply bg-primary text-primary-foreground;
+  }
+  .btn-default:hover {
+    @apply bg-primary/80;
+  }
 
-.btn:focus-visible {
-  border-color: var(--ring);
-  box-shadow: 0 0 0 2px color-mix(in oklch, var(--ring) 50%, transparent);
-}
+  .btn-outline {
+    @apply border-border
+    bg-background
+    dark:bg-input/30
+    dark:border-input;
+  }
+  .btn-outline:hover {
+    @apply bg-muted
+    text-foreground
+    dark:bg-input/50;
+  }
+  .btn-outline[aria-expanded="true"] {
+    @apply bg-muted
+    text-foreground;
+  }
 
-.btn[aria-invalid="true"] {
-  border-color: var(--destructive);
-  box-shadow: 0 0 0 2px color-mix(in oklch, var(--destructive) 20%, transparent);
-}
+  .btn-secondary {
+    @apply bg-secondary
+    text-secondary-foreground;
+  }
+  .btn-secondary:hover {
+    @apply bg-secondary/80;
+  }
+  .btn-secondary[aria-expanded="true"] {
+    @apply bg-secondary
+    text-secondary-foreground;
+  }
 
-.dark .btn[aria-invalid="true"] {
-  border-color: color-mix(in oklch, var(--destructive) 50%, transparent);
-  box-shadow: 0 0 0 2px color-mix(in oklch, var(--destructive) 40%, transparent);
-}
+  .btn-ghost:hover {
+    @apply bg-muted
+    text-foreground
+    dark:bg-muted/50;
+  }
+  .btn-ghost[aria-expanded="true"] {
+    @apply bg-muted
+    text-foreground;
+  }
 
-.btn:disabled {
-  pointer-events: none;
-  opacity: 0.5;
-}
+  .btn-destructive {
+    @apply bg-destructive/10
+    text-destructive
+    dark:bg-destructive/20;
+  }
+  .btn-destructive:hover {
+    @apply bg-destructive/20
+    dark:bg-destructive/30;
+  }
+  .btn-destructive:focus-visible {
+    @apply border-destructive/40
+    ring-destructive/20
+    dark:ring-destructive/40;
+  }
 
-.btn svg {
-  pointer-events: none;
-  flex-shrink: 0;
-}
+  .btn-link {
+    @apply text-primary
+    underline-offset-4;
+  }
+  .btn-link:hover {
+    @apply underline;
+  }
 
-.btn svg:not([class*="size-"]) {
-  width: 1rem;
-  height: 1rem;
+  /* 
+   * sizes 
+   */
+  .btn-md {
+    @apply h-8
+    gap-1.5
+    px-2.5
+    has-data-[icon=inline-end]:pr-2
+    has-data-[icon=inline-start]:pl-2;
+  }
+
+  .btn-xs {
+    @apply h-6
+    gap-1
+    rounded-[min(var(--radius-md),10px)]
+    px-2
+    text-xs
+    in-data-[slot=button-group]:rounded-lg
+    has-data-[icon=inline-end]:pr-1.5
+    has-data-[icon=inline-start]:pl-1.5
+    [&_svg:not([class*='size-'])]:size-3;
+  }
+
+  .btn-sm {
+    @apply h-7
+    gap-1
+    rounded-[min(var(--radius-md),12px)]
+    px-2.5
+    text-[0.8rem]
+    in-data-[slot=button-group]:rounded-lg
+    has-data-[icon=inline-end]:pr-1.5
+    has-data-[icon=inline-start]:pl-1.5
+    [&_svg:not([class*='size-'])]:size-3.5;
+  }
+
+  .btn-lg {
+    @apply h-9
+    gap-1.5
+    px-2.5
+    has-data-[icon=inline-end]:pr-3
+    has-data-[icon=inline-start]:pl-3;
+  }
+
+  /* 
+   * icon modifiers 
+   */
+  .btn-icon {
+    @apply size-8;
+  }
+
+  .btn-icon-xs {
+    @apply size-6
+    rounded-[min(var(--radius-md),10px)]
+    in-data-[slot=button-group]:rounded-lg
+    [&_svg:not([class*='size-'])]:size-3;
+  }
+
+  .btn-icon-sm {
+    @apply size-7
+    rounded-[min(var(--radius-md),12px)]
+    in-data-[slot=button-group]:rounded-lg;
+  }
+
+  .btn-icon-lg {
+    @apply size-9;
+  }
 }

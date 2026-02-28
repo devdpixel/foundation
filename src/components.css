@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@import "./theme.css" theme(reference);
+@custom-variant dark (&:is(.dark *));
+
+@import "./components/ui/button/button.css";
