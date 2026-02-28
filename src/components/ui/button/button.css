@@ -14,7 +14,6 @@
     bg-clip-padding
     text-sm
     font-medium
-    [&_svg:not([class*='size-'])]:size-4
     inline-flex
     items-center
     justify-center
@@ -22,18 +21,20 @@
     transition-all
     disabled:pointer-events-none
     disabled:opacity-50
-    [&_svg]:pointer-events-none
     shrink-0
-    [&_svg]:shrink-0
     outline-none
-    select-none;
+    select-none
+    [&_svg]:pointer-events-none
+    [&_svg]:shrink-0
+    [&_svg:not([class*='size-'])]:size-4;
   }
 
   /* 
    * variants 
    */
   .btn-default {
-    @apply bg-primary text-primary-foreground;
+    @apply bg-primary
+    text-primary-foreground;
   }
   .btn-default:hover {
     @apply bg-primary/80;
@@ -41,7 +42,7 @@
 
   .btn-outline {
     @apply border-border
-    bg-background
+    bg-background-1
     dark:bg-input/30
     dark:border-input;
   }
