@@ -1,0 +1,49 @@
+/**
+ * Стилі кнопки — звичайний CSS з змінними теми.
+ * Окремий файл на компонент без @apply/@reference (Tailwind v4).
+ */
+
+.btn {
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  transition: all 150ms;
+  outline: none;
+  user-select: none;
+}
+
+.btn:focus-visible {
+  border-color: var(--ring);
+  box-shadow: 0 0 0 2px color-mix(in oklch, var(--ring) 50%, transparent);
+}
+
+.btn[aria-invalid="true"] {
+  border-color: var(--destructive);
+  box-shadow: 0 0 0 2px color-mix(in oklch, var(--destructive) 20%, transparent);
+}
+
+.dark .btn[aria-invalid="true"] {
+  border-color: color-mix(in oklch, var(--destructive) 50%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in oklch, var(--destructive) 40%, transparent);
+}
+
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.btn svg {
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.btn svg:not([class*="size-"]) {
+  width: 1rem;
+  height: 1rem;
+}
