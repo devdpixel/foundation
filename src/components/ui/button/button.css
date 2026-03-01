@@ -1,142 +1,136 @@
 @layer components {
   .btn {
-    @apply focus-visible:border-ring
-    focus-visible:ring-2
-    focus-visible:ring-ring/50
-    aria-invalid:ring-2
-    aria-invalid:ring-destructive/20
-    dark:aria-invalid:ring-destructive/40
-    aria-invalid:border-destructive
-    dark:aria-invalid:border-destructive/50
-    rounded-lg
-    border
-    border-transparent
-    bg-clip-padding
-    text-sm
-    font-medium
-    inline-flex
+    @apply inline-flex
     items-center
     justify-center
+    shrink-0
+    h-8
+    gap-1.5
+    px-2.5
     whitespace-nowrap
+    text-sm
+    font-medium
+    text-primary-foreground
+    border
+    border-transparent
+    rounded-lg
+    bg-primary
+    bg-clip-padding
+    outline-none
+    select-none
     transition-all
     disabled:pointer-events-none
     disabled:opacity-50
-    shrink-0
-    outline-none
-    select-none
+    focus-visible:border-ring
+    focus-visible:ring-2
+    focus-visible:ring-ring/50
+    aria-invalid:border-destructive
+    aria-invalid:ring-2
+    aria-invalid:ring-destructive/20
+    dark:aria-invalid:border-destructive/50
+    dark:aria-invalid:ring-destructive/40
+    has-data-[icon=inline-end]:pr-2
+    has-data-[icon=inline-start]:pl-2
     [&_svg]:pointer-events-none
     [&_svg]:shrink-0
     [&_svg:not([class*='size-'])]:size-4;
   }
-
-  /* 
-   * variants 
-   */
-  .btn-default {
-    @apply bg-primary
-    text-primary-foreground;
-  }
-  .btn-default:hover {
+  .btn:hover {
     @apply bg-primary/80;
   }
 
-  .btn-outline {
+  .btn--outline {
     @apply border-border
-    bg-background-1
-    dark:bg-input/30
-    dark:border-input;
-  }
-  .btn-outline:hover {
-    @apply bg-muted
     text-foreground
+    bg-background-1
+    dark:border-input
+    dark:bg-input/30;
+  }
+  .btn--outline:hover {
+    @apply text-foreground
+    bg-muted
     dark:bg-input/50;
   }
-  .btn-outline[aria-expanded="true"] {
-    @apply bg-muted
-    text-foreground;
+  .btn--outline[aria-expanded="true"] {
+    @apply text-foreground
+    bg-muted;
   }
 
-  .btn-secondary {
-    @apply bg-secondary
-    text-secondary-foreground;
+  .btn--secondary {
+    @apply text-secondary-foreground
+    bg-secondary;
   }
-  .btn-secondary:hover {
+  .btn--secondary:hover {
     @apply bg-secondary/80;
   }
-  .btn-secondary[aria-expanded="true"] {
-    @apply bg-secondary
-    text-secondary-foreground;
+  .btn--secondary[aria-expanded="true"] {
+    @apply text-secondary-foreground
+    bg-secondary;
   }
 
-  .btn-ghost:hover {
-    @apply bg-muted
-    text-foreground
+  .btn--ghost:hover {
+    @apply text-foreground
+    bg-muted
     dark:bg-muted/50;
   }
-  .btn-ghost[aria-expanded="true"] {
-    @apply bg-muted
-    text-foreground;
+  .btn--ghost[aria-expanded="true"] {
+    @apply text-foreground
+    bg-muted;
   }
 
-  .btn-destructive {
-    @apply bg-destructive/10
-    text-destructive
+  .btn--destructive {
+    @apply text-destructive
+    bg-destructive/10
     dark:bg-destructive/20;
   }
-  .btn-destructive:hover {
+  .btn--destructive:hover {
     @apply bg-destructive/20
     dark:bg-destructive/30;
   }
-  .btn-destructive:focus-visible {
+  .btn--destructive:focus-visible {
     @apply border-destructive/40
     ring-destructive/20
     dark:ring-destructive/40;
   }
 
-  .btn-link {
+  .btn--link {
     @apply text-primary
+    bg-transparent
     underline-offset-4;
   }
-  .btn-link:hover {
-    @apply underline;
+  .btn--link:hover {
+    @apply underline
+    bg-transparent;
   }
 
   /* 
    * sizes 
    */
-  .btn-md {
-    @apply h-8
-    gap-1.5
-    px-2.5
-    has-data-[icon=inline-end]:pr-2
-    has-data-[icon=inline-start]:pl-2;
-  }
-
-  .btn-xs {
+  .btn--xs {
     @apply h-6
     gap-1
-    rounded-[min(var(--radius-md),10px)]
     px-2
     text-xs
+    rounded-[min(var(--radius-md),10px)]
     in-data-[slot=button-group]:rounded-lg
     has-data-[icon=inline-end]:pr-1.5
     has-data-[icon=inline-start]:pl-1.5
     [&_svg:not([class*='size-'])]:size-3;
   }
 
-  .btn-sm {
+  .btn--sm {
     @apply h-7
     gap-1
-    rounded-[min(var(--radius-md),12px)]
     px-2.5
     text-[0.8rem]
+    rounded-[min(var(--radius-md),12px)]
     in-data-[slot=button-group]:rounded-lg
     has-data-[icon=inline-end]:pr-1.5
     has-data-[icon=inline-start]:pl-1.5
     [&_svg:not([class*='size-'])]:size-3.5;
   }
 
-  .btn-lg {
+  .btn--lg {
     @apply h-9
     gap-1.5
     px-2.5
@@ -147,24 +141,24 @@
   /* 
    * icon modifiers 
    */
-  .btn-icon {
+  .btn--icon {
     @apply size-8;
   }
 
-  .btn-icon-xs {
+  .btn--icon-xs {
     @apply size-6
     rounded-[min(var(--radius-md),10px)]
     in-data-[slot=button-group]:rounded-lg
     [&_svg:not([class*='size-'])]:size-3;
   }
 
-  .btn-icon-sm {
+  .btn--icon-sm {
     @apply size-7
     rounded-[min(var(--radius-md),12px)]
     in-data-[slot=button-group]:rounded-lg;
   }
 
-  .btn-icon-lg {
+  .btn--icon-lg {
     @apply size-9;
   }
 }

@@ -1,49 +1,46 @@
 @layer components {
   .input {
-    @apply border-input
-    focus-visible:border-ring
-    focus-visible:ring-3
-    focus-visible:ring-ring/50
-    aria-invalid:ring-3
-    aria-invalid:ring-destructive/20
-    dark:aria-invalid:ring-destructive/40
-    aria-invalid:border-destructive
-    dark:aria-invalid:border-destructive/50
-    dark:bg-input/30
-    disabled:bg-input/50
-    dark:disabled:bg-input/80
+    @apply w-full
+    min-w-0
+    h-8
+    px-2.5
+    py-1
+    text-base
+    border
+    border-input
+    rounded-lg
+    bg-transparent
+    outline-none
+    transition-colors
+    placeholder:text-muted-foreground
     disabled:pointer-events-none
     disabled:cursor-not-allowed
     disabled:opacity-50
-    file:text-foreground
+    disabled:bg-input/50
+    focus-visible:border-ring
+    focus-visible:ring-3
+    focus-visible:ring-ring/50
+    aria-invalid:border-destructive
+    aria-invalid:ring-3
+    aria-invalid:ring-destructive/20
+    dark:bg-input/30
+    dark:disabled:bg-input/80
+    dark:aria-invalid:border-destructive/50
+    dark:aria-invalid:ring-destructive/40
     file:inline-flex
     file:h-6
     file:border-0
     file:bg-transparent
     file:text-sm
     file:font-medium
-    placeholder:text-muted-foreground
-    w-full
-    min-w-0
-    rounded-lg
-    border
-    bg-transparent
-    text-base
-    transition-colors
-    outline-none
+    file:text-foreground
     md:text-sm;
   }
 
   /*
    * sizes
    */
-  .input-md {
-    @apply h-8
-    px-2.5
-    py-1;
-  }
-
-  .input-sm {
+  .input--sm {
     @apply h-7
     px-2
     py-0.5
@@ -51,7 +48,7 @@
     rounded-[min(var(--radius-md),12px)];
   }
 
-  .input-lg {
+  .input--lg {
     @apply h-9
     px-2.5
     py-1.5;

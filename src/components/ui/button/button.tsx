@@ -6,28 +6,23 @@ import { cn } from "@/lib/utils";
 const buttonVariants = cva("btn", {
   variants: {
     variant: {
-      default: "btn-default",
-      outline: "btn-outline",
-      secondary: "btn-secondary",
-      ghost: "btn-ghost",
-      destructive: "btn-destructive",
-      link: "btn-link",
+      outline: "btn--outline",
+      secondary: "btn--secondary",
+      ghost: "btn--ghost",
+      destructive: "btn--destructive",
+      link: "btn--link",
     },
     size: {
-      default: "btn-md",
-      xs: "btn-xs",
-      sm: "btn-sm",
-      lg: "btn-lg",
-      icon: "btn-icon",
-      "icon-xs": "btn-icon-xs",
-      "icon-sm": "btn-icon-sm",
-      "icon-lg": "btn-icon-lg",
+      xs: "btn--xs",
+      sm: "btn--sm",
+      lg: "btn--lg",
+      icon: "btn--icon",
+      "icon-xs": "btn--icon-xs",
+      "icon-sm": "btn--icon-sm",
+      "icon-lg": "btn--icon-lg",
     },
   },
-  defaultVariants: {
-    variant: "default",
-    size: "default",
-  },
+  defaultVariants: {},
 });
 
 function Button({
