@@ -4,16 +4,16 @@
     items-center
     justify-center
     shrink-0
-    h-8
+    h-9
     gap-1.5
-    px-2.5
+    px-3
     whitespace-nowrap
-    text-sm
-    font-medium
+    text-base
+    font-semibold
     text-primary-foreground
     border
     border-transparent
-    rounded-lg
+    /* rounded-lg */
     bg-primary
     bg-clip-padding
     outline-none
@@ -68,6 +68,11 @@
     bg-secondary;
   }
 
+  .btn--ghost {
+    @apply text-foreground
+    bg-transparent
+    dark:bg-transparent;
+  }
   .btn--ghost:hover {
     @apply text-foreground
     bg-muted
@@ -110,8 +115,8 @@
     @apply h-6
     gap-1
     px-2
-    text-xs
-    rounded-[min(var(--radius-md),10px)]
+    text-sm
+    /* rounded-[min(var(--radius-md),10px)] */
     in-data-[slot=button-group]:rounded-lg
     has-data-[icon=inline-end]:pr-1.5
     has-data-[icon=inline-start]:pl-1.5
@@ -122,8 +127,8 @@
     @apply h-7
     gap-1
     px-2.5
-    text-[0.8rem]
-    rounded-[min(var(--radius-md),12px)]
+    text-sm
+    /* rounded-[min(var(--radius-md),12px)] */
     in-data-[slot=button-group]:rounded-lg
     has-data-[icon=inline-end]:pr-1.5
     has-data-[icon=inline-start]:pl-1.5
@@ -147,14 +152,14 @@
 
   .btn--icon-xs {
     @apply size-6
-    rounded-[min(var(--radius-md),10px)]
+    /* rounded-[min(var(--radius-md),10px)] */
     in-data-[slot=button-group]:rounded-lg
     [&_svg:not([class*='size-'])]:size-3;
   }
 
   .btn--icon-sm {
     @apply size-7
-    rounded-[min(var(--radius-md),12px)]
+    /* rounded-[min(var(--radius-md),12px)] */
     in-data-[slot=button-group]:rounded-lg;
   }
 

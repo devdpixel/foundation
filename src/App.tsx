@@ -10,19 +10,64 @@ export function App() {
       {/* <ComponentExample /> */}
       <div>
         <Example title="Button Variants">
-          <Button>Click me</Button>
-          <Button variant="outline">Click me</Button>
-          <Button variant="secondary">Click me</Button>
-          <Button variant="ghost">Click me</Button>
-          <Button variant="destructive">Click me</Button>
-          <Button variant="link">Click me</Button>
+          <Button>
+            <Diamond />
+            Button
+            <Diamond />
+          </Button>
+
+          <Button variant="secondary">
+            <Diamond />
+            Button
+            <Diamond />
+          </Button>
+
+          <Button variant="outline">
+            <Diamond />
+            Button
+            <Diamond />
+          </Button>
+
+          <Button variant="ghost">
+            <Diamond />
+            Button
+            <Diamond />
+          </Button>
+
+          <Button variant="destructive">
+            <Diamond />
+            Button
+            <Diamond />
+          </Button>
+
+          <Button variant="link">
+            <Diamond />
+            Button
+            <Diamond />
+          </Button>
         </Example>
 
         <Example title="Button Sizes">
-          <Button size="xs">Click me</Button>
-          <Button size="sm">Click me</Button>
-          <Button>Click me</Button>
-          <Button size="lg">Click me</Button>
+          <Button size="xs">
+            <Diamond />
+            Button
+            <Diamond />
+          </Button>
+          <Button size="sm">
+            <Diamond />
+            Button
+            <Diamond />
+          </Button>
+          <Button>
+            <Diamond />
+            Button
+            <Diamond />
+          </Button>
+          <Button size="lg">
+            <Diamond />
+            Button
+            <Diamond />
+          </Button>
 
           <Button size="icon-xs">
             <Diamond />
