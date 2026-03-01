@@ -3,3 +3,4 @@
 @custom-variant dark (&:is(.dark *));
 
 @import "./components/ui/button/button.css";
+@import "./components/ui/input/input.css";
