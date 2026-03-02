@@ -1,9 +1,9 @@
 @theme inline {
   --font-sans: "Inter Variable", sans-serif;
   --color-foreground: var(--foreground);
-  --color-background-1: var(--background-1);
-  --color-background-2: var(--background-2);
-  --color-background-3: var(--background-3);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
   --color-secondary-foreground: var(--secondary-foreground);
