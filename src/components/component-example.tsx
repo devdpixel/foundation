@@ -412,7 +412,7 @@ function FormExample() {
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>
-                  <DropdownMenuItem variant="destructive">
+                  <DropdownMenuItem variant="danger">
                     <LogOutIcon />
                     Sign Out
                     <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>

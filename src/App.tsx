@@ -44,7 +44,7 @@ function ButtonPlayground() {
           <Diamond />
         </Button>
 
-        <Button variant="destructive">
+        <Button variant="danger">
           <Diamond />
           Button
           <Diamond />

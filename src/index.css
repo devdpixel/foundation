@@ -8,35 +8,37 @@
 
 :root {
   --radius: 0.625rem;
-  /* Colors */
-  /* Surface */
+  /* colors */
+  /* surface */
   --surface-1: oklch(1 0 0);
   --surface-2: oklch(0.97 0 0);
   --surface-3: oklch(0.918 0 0);
   --backdrop: oklch(0.145 0 0);
-  /* Base */
+  /* base */
   --foreground: oklch(0.145 0 0);
   --neutral: oklch(0.556 0 0);
   --neutral-foreground: oklch(0.556 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  /* Theme */
+  /* theme */
   --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
-  /* Status */
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --warning: oklch(0.58 0.22 27);
-  --warning-foreground: oklch(0.58 0.22 27);
-  --destructive: oklch(0.58 0.22 27);
-  --destructive-foreground: oklch(0.58 0.22 27);
-  /* Functional */
+  /* functional */
   --input: oklch(0.922 0 0);
   --border: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
-  /* Chart */
+  /* status */
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --success: oklch(0.58 0.22 27);
+  --success-foreground: oklch(0.58 0.22 27);
+  --warning: oklch(0.58 0.22 27);
+  --warning-foreground: oklch(0.58 0.22 27);
+  --danger: oklch(0.58 0.22 27);
+  --danger-foreground: oklch(0.58 0.22 27);
+  /* chart */
   --chart-1: oklch(0.809 0.105 251.813);
   --chart-2: oklch(0.623 0.214 259.815);
   --chart-3: oklch(0.546 0.245 262.881);
@@ -45,34 +47,37 @@
 }
 
 .dark {
-  /* Surface Colors */
+  /* colors */
+  /* surface */
   --surface-1: oklch(0.145 0 0);
   --surface-2: oklch(0.205 0 0);
   --surface-3: oklch(0.269 0 0);
   --backdrop: oklch(0 0 0 / 0.6);
-  /* Base Colors */
+  /* base */
   --foreground: oklch(0.985 0 0);
   --neutral: oklch(0.708 0 0);
   --neutral-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  /* Theme Colors */
+  /* theme */
   --primary: oklch(0.87 0 0);
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
-  /* Status Colors */
+  /* status */
   --accent: oklch(0.371 0 0);
   --accent-foreground: oklch(0.985 0 0);
+  --success: oklch(0.704 0.191 142);
+  --success-foreground: oklch(0.145 0 0);
   --warning: oklch(0.704 0.191 22.216);
   --warning-foreground: oklch(0.145 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  /* Functional Colors */
+  --danger: oklch(0.704 0.191 22.216);
+  --danger-foreground: oklch(0.985 0 0);
+  /* functional */
   --input: oklch(1 0 0 / 15%);
   --border: oklch(1 0 0 / 10%);
   --ring: oklch(0.556 0 0);
-  /* Charts Colors */
+  /* chart */
   --chart-1: oklch(0.809 0.105 251.813);
   --chart-2: oklch(0.623 0.214 259.815);
   --chart-3: oklch(0.546 0.245 262.881);

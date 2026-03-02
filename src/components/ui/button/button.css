@@ -24,11 +24,11 @@
     focus-visible:border-ring
     focus-visible:ring-2
     focus-visible:ring-ring/50
-    aria-invalid:border-destructive
+    aria-invalid:border-danger
     aria-invalid:ring-2
-    aria-invalid:ring-destructive/20
-    dark:aria-invalid:border-destructive/50
-    dark:aria-invalid:ring-destructive/40
+    aria-invalid:ring-danger/20
+    dark:aria-invalid:border-danger/50
+    dark:aria-invalid:ring-danger/40
     has-data-[icon=inline-end]:pr-2
     has-data-[icon=inline-start]:pl-2
     [&_svg]:pointer-events-none
@@ -83,19 +83,19 @@
     bg-muted;
   }
 
-  .btn--destructive {
-    @apply text-destructive
-    bg-destructive/10
-    dark:bg-destructive/20;
+  .btn--danger {
+    @apply text-danger
+    bg-danger/10
+    dark:bg-danger/20;
   }
-  .btn--destructive:hover {
-    @apply bg-destructive/20
-    dark:bg-destructive/30;
+  .btn--danger:hover {
+    @apply bg-danger/20
+    dark:bg-danger/30;
   }
-  .btn--destructive:focus-visible {
-    @apply border-destructive/40
-    ring-destructive/20
-    dark:ring-destructive/40;
+  .btn--danger:focus-visible {
+    @apply border-danger/40
+    ring-danger/20
+    dark:ring-danger/40;
   }
 
   .btn--link {
